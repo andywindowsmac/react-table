@@ -3,6 +3,14 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "libs/*",
+      "apps/*",
+      "tools/*"
+    ]
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,9 +19,12 @@
     "url": "git+https://github.com/andywindowsmac/react-table.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/andywindowsmac/react-table/issues"
   },
-  "homepage": "https://github.com/andywindowsmac/react-table#readme"
+  "homepage": "https://github.com/andywindowsmac/react-table#readme",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
 }
