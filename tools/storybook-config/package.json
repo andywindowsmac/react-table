@@ -5,6 +5,8 @@
   "files": ["bin"],
   "scripts": {},
   "dependencies": {
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
     "@storybook/addon-actions": "^6.0.21",
     "@storybook/addon-essentials": "^6.0.21",
     "@storybook/addon-links": "^6.0.21",

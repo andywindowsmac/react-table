@@ -1,12 +1,5 @@
 const path = require('path')
 
-const alias = {
-  '@Assets': path.resolve(process.env.PWD, 'src/assets'),
-  '@Atoms': path.resolve(process.env.PWD, 'src/atoms/'),
-  '@Molecules': path.resolve(process.env.PWD, 'src/molecules/'),
-  '@Styles': path.resolve(process.env.PWD, 'src/styles'),
-}
-
 function wrapLoader(loader, options) {
   if (options === false) {
     return [];
@@ -41,13 +34,6 @@ module.exports = {
             ],
           },
         ],
-      },
-      resolve: {
-        ...config.resolve,
-        alias: {
-          ...config.resolve.alias,
-          ...alias,
-        },
       },
     };
   },

@@ -1,0 +1,55 @@
+{
+  "name": "@react-table/storybook-example",
+  "version": "0.1.0",
+  "sideEffects": false,
+  "description": "",
+  "types": "build/src/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "main": "build/main.bundle.js",
+  "module": "build/main.bundle.js",
+  "scripts": {
+    "test": "test-config --type=ui",
+    "test:watch": "test-config --type=ui --watch",
+    "test:update": "test-config --type=ui --update-snapshot",
+    "stylelint": "lint-config --type=css",
+    "stylelint:fix": "lint-config --type=fixCSS",
+    "lint": "lint-config --type=react",
+    "lint:fix": "lint-config --type=fixReact",
+    "dev": "storybook-config",
+    "clean": "rm -rf ./storybook-static",
+    "clean-all": "yarn clean && rm -rf node_modules/",
+    "precommit": "lint-staged --relative"
+  },
+  "lint-staged": {
+    "**/*.+(scss)": [
+      "yarn stylelint:fix",
+      "jest --bail --findRelatedTests"
+    ],
+    "**/*.+(ts|tsx)": [
+      "yarn lint:fix",
+      "jest --bail --findRelatedTests"
+    ]
+  },
+  "peerDependencies": {
+    "react": "16.14.0",
+    "react-dom": "16.14.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6"
+  },
+  "devDependencies": {
+    "@react-table/lint-config": "^0.0.1",
+    "@react-table/storybook-config": "^0.0.1",
+    "@react-table/rollup-config": "^0.0.1",
+    "@react-table/test-config": "^0.0.1",
+    "@react-table/ts-scripts": "^0.0.2",
+    "@types/classnames": "^2.2.10",
+    "@types/react": "16.9.53",
+    "@types/react-dom": "16.9.8",
+    "lint-staged": "^10.3.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

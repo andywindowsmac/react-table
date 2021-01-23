@@ -1,0 +1,31 @@
+{
+  "extends": "@react-table/ts-scripts/tsconfig.json",
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": true,
+    "declarationDir": "build",
+    "skipLibCheck": true,
+    "jsx": "react",
+    "target": "es2015",
+    "module": "ES2015",
+    "outDir": "./build",
+    "baseUrl": ".",
+    "lib": ["es2015", "DOM"],
+    "paths": {
+      "@Molecules/*": [
+          "src/molecules/*"
+      ],
+      "@Atoms/*": [
+          "src/atoms/*"
+      ],
+      "@Assets/*": [
+          "src/assets/*"
+      ]
+    }
+  },
+  "exclude": [
+    "storybook-static",
+    "build",
+    "dist"
+  ]
+}
