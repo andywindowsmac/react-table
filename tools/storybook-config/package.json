@@ -1,0 +1,21 @@
+{
+  "name": "@react-table/storybook-config",
+  "version": "0.0.1",
+  "bin": "bin/index.js",
+  "files": ["bin"],
+  "scripts": {},
+  "dependencies": {
+    "@storybook/addon-actions": "^6.0.21",
+    "@storybook/addon-essentials": "^6.0.21",
+    "@storybook/addon-links": "^6.0.21",
+    "@storybook/react": "^6.0.21",
+    "@teamsupercell/typings-for-css-modules-loader": "^2.3.0",
+    "babel-loader": "^8.2.2",
+    "cross-spawn": "^7.0.3",
+    "chalk": "^4.1.0",
+    "css-loader": "^5.0.1",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0"
+  },
+  "devDependencies": {}
+}

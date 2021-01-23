@@ -1,0 +1,18 @@
+{
+  "name": "@react-table/ts-scripts",
+  "version": "0.0.2",
+  "scripts": {},
+  "main": "index.ts",
+  "lint-staged": {
+    "**/*.+(ts|tsx|css|scss)": [
+      "yarn lint",
+      "jest --bail --findRelatedTests"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "26.0.19",
+    "@types/node": "13.11.0",
+    "lint-staged": "^10.3.0",
+    "typescript": "3.8.3"
+  }
+}
