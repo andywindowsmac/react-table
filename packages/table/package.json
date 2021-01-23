@@ -1,0 +1,42 @@
+{
+  "name": "@react-table/table",
+  "version": "0.0.1",
+  "type": "module",
+  "sideEffects": false,
+  "types": "build/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "main": "build/index.js",
+  "module": "build/index.js",
+  "scripts": {
+    "precommit": "lint-staged",
+    "lint": "lint-config --type=js",
+    "lint:fix": "lint-config --type=fixJs",
+    "build": "rollup-config",
+    "watch": "node run.js",
+    "dev": "node run.js",
+    "test": "test-config",
+    "test:watch": "test-config --watch",
+    "clean": "rm -rf ./build",
+    "clean-all": "yarn clean && rm -rf node_modules/"
+  },
+  "lint-staged": {
+    "**/*.+(ts|tsx|css|scss)": [
+      "yarn lint",
+      "jest --bail --findRelatedTests"
+    ]
+  },
+  "optionalDependencies": {},
+  "peerDependencies": {},
+  "dependencies": {},
+  "devDependencies": {
+    "@react-table/test-config": "^0.0.1",
+    "@react-table/rollup-config": "^0.0.1",
+    "@react-table/lint-config": "^0.0.1",
+    "@react-table/ts-scripts": "^0.0.2",
+    "@types/axios": "0.14.0",
+    "@types/lodash": "^4.14.162",
+    "lint-staged": "^10.3.0"
+  }
+}
